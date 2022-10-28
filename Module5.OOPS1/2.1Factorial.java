@@ -65,10 +65,12 @@ public class Fraction
 	  
    }
    
-   public void add(Fraction f1,Fraction f2)
+   public static Fraction add(Fraction f1,Fraction f2)
    {
 	   int num=f1.numerator*f2.denominator+(f2.numerator*f1.denominator);	
 	   int den=f1.denominator*f2.denominator;
+	    Fraction f3=new Fraction(num,den);
+	   return f3;
 	   
    }
   
