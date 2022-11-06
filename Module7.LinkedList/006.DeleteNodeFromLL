@@ -1,0 +1,34 @@
+public class Solution {
+	public static LinkedListNode<Integer> deleteNode(LinkedListNode<Integer> head, int pos) 
+	{
+		if(head==null)
+		{
+			return 
+		}
+	if(pos==0) //agar position hi zero hai to
+	{
+	  return head.next;
+	}
+	int size=0;
+	LinkedListNode temporary=head;
+	while(temporary!=null)
+	{
+		temporary=temporary.next;
+		size++;
+	}
+    if(size-1<pos)return head; //agar position is greater than LL size +1
+
+	LinkedListNode<Integer> temp=head; //else agar shi position hai to
+	 int index=0;
+	 while(index<pos-1&&temp!=null)
+	 {
+       temp=temp.next;
+	   index=index+1;
+	 }
+	 LinkedListNode prev=temp;
+	 prev.next=prev.next.next;
+	 
+	return head;
+	}
+
+}
